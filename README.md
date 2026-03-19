@@ -1,6 +1,6 @@
 # sentiment-api
 
-![CI](https://github.com/yava-code/sentiment-api/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/yava-code/ml-ops-starter/actions/workflows/ci.yml/badge.svg)
 
 tiny gradio ui for sentiment (distilbert via transformers), docker + github actions.
 
