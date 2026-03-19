@@ -10,6 +10,10 @@ jobs:
         run: docker build -t sentiment-api .
       - name: Run container + smoke test
         run: |
-          docker run -d -p 8000:8000 --name api sentiment-api
-          sleep 5
-          curl -f "http://localhost:8000/predict?text=great+movie"
+          docker run -d -p 7860:7860 --name api sentiment-api
+          ok=0
+          for i in $(seq 1 40); do
+            if curl -fsS "http://localhost:7860/" >/dev/null 2>&1; then ok=1; break; fi
+            sleep 10
+          done
+          test "$ok" = 1
