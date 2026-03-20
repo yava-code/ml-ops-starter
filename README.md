@@ -25,6 +25,17 @@ or `make run` if you have make installed.
 
 open http://127.0.0.1:7860
 
+## tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+or `make test`.
+
+no gpu / no model download — tests mock the pipeline.
+
 ## docker
 
 ```bash
@@ -38,5 +49,5 @@ first start downloads the model, can take a bit.
 
 ## layout
 
-- `model.py` — loads the pipeline + `predict`
+- `model.py` — lazy-loads the pipeline + `predict`
 - `app.py` — gradio only

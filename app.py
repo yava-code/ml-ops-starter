@@ -22,6 +22,7 @@ demo = gr.Interface(
         gr.Number(label="score", precision=3),
     ],
     title="sentiment",
+    description="[github.com/yava-code](https://github.com/yava-code)",
     flagging_mode="manual",
     examples=[["i hate this movie"]],
     analytics_enabled=False,
